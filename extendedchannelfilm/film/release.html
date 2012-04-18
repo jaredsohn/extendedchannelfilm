@@ -1,0 +1,102 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<title>Extended Channel Film plug-in for PBRT - Release History</title>
+<b>Release History</b>
+
+  <p class=MsoNormal>v0.23 July 3, 2005</p>
+  <ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       10.0pt'>ShouldAve implementation was broken in a couple places; now fixed.
+<o:p></o:p></span></li>
+<li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>changed constant for minimum float value. (Before was ~0, now is -[really big number]). 
+
+<o:p></o:p></span></li>
+</ul>
+
+  <p class=MsoNormal>v0.22 July 3, 2005 (Bug fixes/code cleanup thanks to John Danks)</p>
+  <ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>no longer attempting to delete a void *<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>using find instead of substr<o:p></o:p></span></li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>code now consistently uses Unix-style endlines<o:p></o:p></span></li>
+
+ <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>fixed bug where non-RGBA data was written to the wrong channels<o:p></o:p></span></li>
+
+<li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>certain portions of the code (such as Tokenize()) are now cleaner<o:p></o:p></span></li>
+</ul>
+  <p class=MsoNormal>v0.21 June 23, 2005</p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>new 'id' channel<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>if channel begins with ‘pbrt_’, the plug-in now warns the user and
+       quits</span></li>
+  </ul>
+  <p class=MsoNormal>v0.2 June 20, 2005</p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>can easily clamp variables to a range<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>can choose to either average samples or just arbitrarily pick the last
+       one<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>can choose EXR output variable types (i.e. HALF/FLOAT/UINT)<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>in many instances, replaced hash tables with a couple of arrays
+       to improve performance<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>WriteExtendedChannelImage was moved into the plug-in to reduce the
+       number of changes in the main PBRT codebase<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>code now follows PBRT coding style more closely<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>improved performance of WriteImage()<o:p></o:p></span></li>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in;
+       mso-layout-grid-align:none;text-autospace:none'><span style='mso-bidi-font-size:
+       10.0pt'>displays warning if an invalid channel is entered<o:p></o:p></span></li>
+  </ul>
+  <p class=MsoNormal>v0.1 June 13, 2005</p>
+  <ul style='margin-top:0in' type=disc>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo5;tab-stops:list .5in'>initial
+       version</li>
+  </ul>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
